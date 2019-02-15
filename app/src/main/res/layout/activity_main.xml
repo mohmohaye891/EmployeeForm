@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Employee Form"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_images"/>
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_blackgray_24dp"
+                    android:layout_gravity="bottom"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ll_profile"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_profile"
+                    android:src="@drawable/ic_person_outline_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false">
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="Full Name"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_profile"
+                    android:src="@drawable/ic_person_outline_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_father_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false">
+                <EditText
+                    android:id="@+id/et_father_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Father Name"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date_range_black_24dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_date_of_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Birth"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_gray"
+                    android:layout_toRightOf="@+id/iv_date"
+                    android:layout_marginLeft="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_date"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Spinner
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:entries="@array/day_selections"/>
+
+                    <Spinner
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:entries="@array/months_selections"/>
+
+                    <Spinner
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:entries="@array/year_selections"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail_outline_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false">
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email Id"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_android_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false">
+                    <EditText
+                        android:id="@+id/et_phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="Mobile Number"
+                        android:fontFamily="sans-serif"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="16dp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_account_circle_black_24dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="45dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gps_not_fixed_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false">
+                    <EditText
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="City"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="16dp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="48dp">
+
+               <ImageView
+                   android:id="@+id/iv_term_and_conditions"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_verified_user_black_24dp"
+                   android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_term_and_conditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Term &amp; Conditions"
+                    android:layout_toRightOf="@+id/iv_term_and_conditions"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_gray"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cb_term_and_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_term_and_conditions"
+                    android:layout_marginLeft="24dp"
+                    android:background="@color/colorGray"
+                    android:layout_marginTop="4dp"
+                    android:checked="true"
+                    android:text="Accepts Term and Conditions"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_white_24dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

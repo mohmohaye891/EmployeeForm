@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Employee List"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_employee_lists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profile_images"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_profile"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Moh"/>
+
+                <TextView
+                    android:id="@+id/tv_email_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email ID"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="moh@gmail.com"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/tv_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9798404437"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:layout_below="@+id/tv_mobile_number"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_alignParentRight="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_blackgray_24dp"
+                    android:layout_below="@+id/tv_mobile_number"
+                    android:layout_toLeftOf="@+id/iv_delete"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search_black_24dp"
+                    android:layout_below="@+id/tv_mobile_number"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/iv_edit"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
